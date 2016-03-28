@@ -1,3 +1,24 @@
 $(document).ready(function() {
 
+  $('#input').keydown(function(event) {
+    if (event.keyCode == 13) {
+      var number = $('#input').val();
+      fizzBuzz(number);
+      console.log(number);
+    };
+  });
+
+  function fizzBuzz(number) {
+    for (var count = 1; count <= number; count++) {
+      if (count%3 == 0 && count%5 == 0) {
+        $('p').append('<h3>fizzBuzz</h3>');
+      } else if (count% 3 == 0) {
+        $('p').append('<h3>fizz</h3>');
+      } else if (count%5 == 0) {
+        $('p').append('<h3>buzz</h3>');
+      } else {
+        $('p').append('<h3>'+ count +'</h3>');
+      };
+    };
+  };
 });
