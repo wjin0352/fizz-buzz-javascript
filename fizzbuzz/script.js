@@ -8,6 +8,11 @@ $(document).ready(function() {
     };
   });
 
+  $(document).on('click', '#clear', function(event) {
+    console.log('hide');
+      $('h3').hide();
+  });
+
   function fizzBuzz(number) {
     for (var count = 1; count <= number; count++) {
       if (count%3 == 0 && count%5 == 0) {
