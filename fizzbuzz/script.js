@@ -3,7 +3,7 @@ $(document).ready(function() {
   $('#input').keydown(function(event) {
     if (event.keyCode == 13) {
       var number = $('#input').val();
-      fizzBuzz(number);
+      checkNum(number);
       console.log(number);
     };
   });
@@ -12,6 +12,10 @@ $(document).ready(function() {
     console.log('hide');
       $('h3').hide();
   });
+
+  function checkNum(number) {
+    ((number%1 == 0) && (parseInt(number))) ? fizzBuzz(number) : alert('Enter a whole number please...');
+  };
 
   function fizzBuzz(number) {
     for (var count = 1; count <= number; count++) {
